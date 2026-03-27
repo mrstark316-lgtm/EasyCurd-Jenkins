@@ -47,8 +47,8 @@ This document provides a complete step-by-step guide to deploy the EasyCRUD appl
 
 | Instance | Purpose | Recommended Type |
 |---|---|---|
-| Jenkins Server | CI/CD | t2.medium |
-| Build Server | Docker builds + kubectl | t2.medium |
+| Jenkins Server | CI/CD | c7i-flex-large |
+| Build Server | Docker builds + kubectl | c7i-flex-large |
 
 ### Basic Setup (run on both EC2 instances)
 
