@@ -41,7 +41,7 @@ resource "aws_eks_cluster" "cluster1" {
   vpc_config{
     subnet_ids = ["subnet-05bddb939c67ea21a", "subnet-0a369b2f295418d07", "subnet-09d243c3d566da25e"]
     security_group_ids = [
-      	sg-0350e963486316cad"]
+      	"sg-0350e963486316cad"]
   }
   access_config {
     authentication_mode = "API_AND_CONFIG_MAP"
