@@ -101,7 +101,7 @@ resource "aws_eks_node_group" "group1" {
     node_group_name = "group1"
     node_role_arn = aws_iam_role.node_group_role.arn
     subnet_ids = ["subnet-05bddb939c67ea21a", "subnet-0a369b2f295418d07"]
-    instance_types = ["c7i-flex-large"]
+    instance_types = ["c7i-flex.large"]
     scaling_config {
         desired_size = 2
         max_size = 3
