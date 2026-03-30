@@ -39,7 +39,7 @@ resource "aws_iam_role_policy_attachment" "cluster_policy_attachment" {
 resource "aws_eks_cluster" "cluster1" {
   name = "cluster"
   vpc_config{
-    subnet_ids = ["subnet-05bddb939c67ea21a", "subnet-0a369b2f295418d07", "subnet-09d243c3d566da25e"]
+    subnet_ids = ["subnet-05bddb939c67ea21a", "subnet-0a369b2f295418d07"]
     security_group_ids = [
       	"sg-0350e963486316cad"]
   }
@@ -100,7 +100,7 @@ resource "aws_eks_node_group" "group1" {
     cluster_name = aws_eks_cluster.cluster1.name
     node_group_name = "group1"
     node_role_arn = aws_iam_role.node_group_role.arn
-    subnet_ids = ["subnet-05bddb939c67ea21a", "subnet-0a369b2f295418d07", "subnet-09d243c3d566da25e"]
+    subnet_ids = ["subnet-05bddb939c67ea21a", "subnet-0a369b2f295418d07"]
     instance_types = ["c7i-flex-large"]
     scaling_config {
         desired_size = 2
